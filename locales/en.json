@@ -1,0 +1,39 @@
+{
+    "company": {
+        "name": "Survey And Aerial Mapping One Member Limited Liability"
+    },
+    "links": {
+        "home": "Home",
+        "about": {
+            "name": "Comapny Profile",
+            "general": "General Introduction",
+            "open-letter": "Open-letter",
+            "thanhvien": "Subsidiary companies and branches",
+            "history": "History",
+            "companyStruct": "Company Struct",
+            "achievement": "Achievement",
+            "equipment": "Equipment"
+        },
+        "service": "Services",
+        "search": "Search",
+        "english": "English",
+        "vietnamese": "Vietnames"
+    },
+    "header": {
+        "langue": "Langue"
+    },
+    "footer": {
+        "content": "Division of Engineering Technology - SAMCOM"
+    },
+    "home": {
+        "title": "Welcome",
+        "introduction": "This is an introduction in English."
+    },
+    "about": {
+        "title": "About",
+        "introduction": "This page is made to give you more informations."
+    },
+    "meta": {
+        "home": "Survey And Aerial Mapping One Member Limited Liability"
+    }
+}

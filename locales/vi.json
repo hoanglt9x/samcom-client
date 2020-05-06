@@ -1,0 +1,39 @@
+{
+    "company": {
+        "name": "Công ty TNHH MTV Trắc địa Bản đồ"
+    },
+    "links": {
+        "home": "Trang chủ",
+        "about": {
+            "name": "Giới thiệu",
+            "general": "Giới thiệu chung",
+            "open-letter": "Thư ngỏ",
+            "thanhvien": "Đơn vị thành viên",
+            "history": "Lịch sử",
+            "companyStruct": "Cơ cấu tổ chức",
+            "achievement": "Thành tích",
+            "equipment": "Trang thiết bị"
+        },
+        "service": "Dịch vụ",
+        "search": "Tìm kiếm",
+        "english": "Tiếng Anh",
+        "vietnamese": "Tiếng Việt"
+    },
+    "header": {
+        "langue": "Ngôn ngữ"
+    },
+    "footer": {
+        "content": "Phòng Kỹ thuật Công nghệ - SAMCOM"
+    },
+    "home": {
+        "title": "Xin chào",
+        "introduction": "Đây là phần giới thiệu tiếng Anh"
+    },
+    "about": {
+        "title": "Giới thiệu",
+        "introduction": "Đây là trang đưa ra các thông tin chi tiết"
+    },
+    "meta": {
+        "home": "Công ty TNHH MTV Trắc địa Bản đồ"
+    }
+}
