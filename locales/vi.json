@@ -23,11 +23,15 @@
         "langue": "Ngôn ngữ"
     },
     "footer": {
-        "content": "Phòng Kỹ thuật Công nghệ - SAMCOM"
+        "designBy": "Thiết kế bởi",
+        "content": "Phòng Kỹ thuật - Công nghệ"
+    },
+    "backtop": {
+
     },
     "home": {
         "title": "Xin chào",
-        "introduction": "Đây là phần giới thiệu tiếng Anh"
+        "introduction": "Giới thiệu"
     },
     "about": {
         "title": "Giới thiệu",

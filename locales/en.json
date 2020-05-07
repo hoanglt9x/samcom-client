@@ -23,8 +23,10 @@
         "langue": "Langue"
     },
     "footer": {
-        "content": "Division of Engineering Technology - SAMCOM"
+        "designBy": "Design by",
+        "content": "Division of Engineering Technology"
     },
+    "backtop": {},
     "home": {
         "title": "Welcome",
         "introduction": "This is an introduction in English."

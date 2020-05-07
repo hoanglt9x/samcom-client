@@ -35,9 +35,7 @@ export default {
                 content: '21.050, 105.785'
             }
         ],
-        link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-        ]
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
     /*
      ** Customize the progress-bar color
@@ -46,7 +44,7 @@ export default {
     /*
      ** Global CSS
      */
-    css: [],
+    css: ['~/css/main.css'],
     /*
      ** Plugins to load before mounting the App
      */
@@ -68,6 +66,7 @@ export default {
     modules: [
         // Doc: https://bootstrap-vue.js.org
         'bootstrap-vue/nuxt',
+        'nuxt-material-design-icons',
         // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
@@ -80,6 +79,9 @@ export default {
             }
         ]
     ],
+    bootstrapVue: {
+        icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
+    },
     /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options
