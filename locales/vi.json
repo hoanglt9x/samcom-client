@@ -39,5 +39,13 @@
     },
     "meta": {
         "home": "Công ty TNHH MTV Trắc địa Bản đồ"
+    },
+    "aerial-photography": {
+        "title": "BAY CHỤP ẢNH",
+        "description": "Công ty TNHH MTV Trắc địa Bản đồ đã và đang áp dụng nhiều phương tiện bay chụp ảnh hàng không hiện đại."
+    },
+    "field-surveying": {
+        "title": "ĐO ĐẠC NGOẠI NGHIỆP",
+        "description": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích."
     }
 }

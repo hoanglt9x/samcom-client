@@ -48,7 +48,14 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: ['@/plugins/i18n.js'],
+    plugins: [
+        '@/plugins/i18n.js',
+        {
+            src: '~plugins/vue-scrollmagic.js',
+            ssr: false
+        },
+        { src: 'plugins/owl.js', ssr: false }
+    ],
     /*
      ** Nuxt.js dev-modules
      */
@@ -70,6 +77,7 @@ export default {
         // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
+        'vue-scrollto/nuxt',
         // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv', [
             '@nuxtjs/component-cache',

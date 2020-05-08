@@ -6,7 +6,7 @@
           <img
             src="/images/logo.png"
             class="d-inline-block align-top"
-            alt="Kitten"
+            alt="SAMCOM-VN"
           />
         </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -15,10 +15,10 @@
           <b-navbar-nav class="ml-auto">
             <b-nav-item to="/">{{ $t('links.home') }}</b-nav-item>
             <b-nav-item-dropdown :text="$t('links.about.name')" right>
-              <b-dropdown-item to="/"
+              <b-dropdown-item v-scroll-to="'#about'"
                 >{{ $t('links.about.general') }}
               </b-dropdown-item>
-              <b-dropdown-item to="/">{{
+              <b-dropdown-item v-b-scrollspy:contact to="/">{{
                 $t('links.about.open-letter')
               }}</b-dropdown-item>
               <b-dropdown-item to="/">{{
@@ -69,22 +69,16 @@
         </b-collapse>
       </b-navbar>
     </div>
-    <component-video-overlay />
   </div>
 </template>
 
 <script>
-import componentVideoOverlay from '~/components/VideoOverlay.vue'
-export default {
-  components: {
-    componentVideoOverlay
-  }
-}
+export default {}
 </script>
 
 <style scoped>
 .navbar {
-  opacity: 0.5;
+  background-color: black;
 }
 .nav-item {
   color: yellow;

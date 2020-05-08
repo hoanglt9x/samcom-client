@@ -1,11 +1,13 @@
 <template>
   <div>
-    Day la trang About
+    Day la trang anh
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'infomation'
+}
 </script>
 
 <style scoped></style>

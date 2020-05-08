@@ -1,6 +1,9 @@
 <template>
   <main id="main">
     <component-Intro />
+    <component-service />
+    <component-team />
+    <component-client />
     <component-contact />
   </main>
 </template>
@@ -8,10 +11,16 @@
 <script>
 import componentContact from '~/components/home/Contact.vue'
 import componentIntro from '~/components/home/Intro.vue'
+import componentService from '~/components/home/Service.vue'
+import componentTeam from '~/components/home/Team.vue'
+import componentClient from '~/components/home/Clients.vue'
 export default {
   components: {
     componentContact,
-    componentIntro
+    componentIntro,
+    componentService,
+    componentTeam,
+    componentClient
   },
   head() {
     return {
