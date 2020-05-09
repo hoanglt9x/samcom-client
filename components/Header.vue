@@ -49,16 +49,12 @@
       </div>
       <!-- Header End -->
     </header>
-    <component-video-overlay />
   </div>
 </template>
 
 <script>
-import componentVideoOverlay from '~/components/VideoOverlay.vue'
 export default {
-  components: {
-    componentVideoOverlay
-  }
+  components: {}
 }
 </script>
 

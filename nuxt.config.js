@@ -33,9 +33,20 @@ export default {
                 hid: 'ICBM',
                 name: 'ICBM',
                 content: '21.050, 105.785'
+            },
+            {
+                hid: 'theme-color',
+                name: 'theme-color',
+                content: '#db5945'
             }
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            // { rel: 'stylesheet', href: 'https://unpkg.com/swiper/css/swiper.min.css' }
+        ],
+        script: [
+            // { src: 'https://unpkg.com/swiper/js/swiper.min.js' }
+        ]
     },
     /*
      ** Customize the progress-bar color
@@ -44,17 +55,18 @@ export default {
     /*
      ** Global CSS
      */
-    css: ['~/css/main.css'],
+    css: ['~/css/main.css', '~/assets/main.css', 'swiper/css/swiper.css'],
     /*
      ** Plugins to load before mounting the App
      */
     plugins: [
         '@/plugins/i18n.js',
         {
-            src: '~plugins/vue-scrollmagic.js',
+            src: '~/plugins/vue-scrollmagic.js',
             ssr: false
         },
-        { src: 'plugins/owl.js', ssr: false }
+        { src: '~/plugins/owl.js', ssr: false },
+        { src: '@/plugins/vue-swiper.js', mode: 'client' }
     ],
     /*
      ** Nuxt.js dev-modules

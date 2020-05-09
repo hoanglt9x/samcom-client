@@ -47,5 +47,11 @@
     "field-surveying": {
         "title": "ĐO ĐẠC NGOẠI NGHIỆP",
         "description": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích."
+    },
+    "media": {
+        "title": "HOẠT ĐỘNG",
+        "image": "Hình ảnh",
+        "video": "Video"
+
     }
 }

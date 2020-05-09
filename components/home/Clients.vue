@@ -6,7 +6,7 @@
         <hr />
       </header>
 
-      <no-ssr>
+      <client-only>
         <carousel :autoplay="true" :items="5" :autoplay-speed="200">
           <img
             v-for="item in 18"
@@ -15,7 +15,7 @@
             :alt="item"
           />
         </carousel>
-      </no-ssr>
+      </client-only>
     </div>
   </section>
 </template>

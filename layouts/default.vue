@@ -1,8 +1,8 @@
 <template>
   <div>
     <component-navbar />
-    <component-video-overlay />
     <!-- <component-header /> -->
+    <component-video-overlay />
     <nuxt />
     <component-footer />
     <component-backtop />

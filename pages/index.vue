@@ -3,6 +3,7 @@
     <component-Intro />
     <component-service />
     <component-team />
+    <component-liblary />
     <component-client />
     <component-contact />
   </main>
@@ -14,13 +15,15 @@ import componentIntro from '~/components/home/Intro.vue'
 import componentService from '~/components/home/Service.vue'
 import componentTeam from '~/components/home/Team.vue'
 import componentClient from '~/components/home/Clients.vue'
+import componentLiblary from '~/components/home/Liblary.vue'
 export default {
   components: {
     componentContact,
     componentIntro,
     componentService,
     componentTeam,
-    componentClient
+    componentClient,
+    componentLiblary
   },
   head() {
     return {
