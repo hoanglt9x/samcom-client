@@ -7,15 +7,16 @@
       <div class="row">
         <div class="col-lg-12">
           <ul id="portfolio-flters">
-            <li class="filter-active">
+            <li class="filter-active" @click="changActive('Anh')">
               {{ $t('media.image') }}
             </li>
-            <li>{{ $t('media.video') }}</li>
+            <li @click="changActive('Video')">{{ $t('media.video') }}</li>
           </ul>
         </div>
       </div>
       <hr />
-      <component-galaxy-image />
+      <component-galaxy-image v-if="isVideo === 'Anh'" />
+      <componet-galaxy-video v-else />
       <!-- <div class="row portfolio-container">
         <component-galaxy-image />
       </div> -->
@@ -25,9 +26,22 @@
 
 <script>
 import componentGalaxyImage from '~/components/home/GalaxyImage.vue'
+import componetGalaxyVideo from '~/components/home/GalaxyVideo.vue'
 export default {
   components: {
-    componentGalaxyImage
+    componentGalaxyImage,
+    componetGalaxyVideo
+  },
+  data() {
+    return {
+      isVideo: 'Video'
+    }
+  },
+  methods: {
+    // changeActive(value) {
+    //   // eslint-disable-next-line no-undef
+    //   isVideo = value
+    // }
   }
 }
 </script>
