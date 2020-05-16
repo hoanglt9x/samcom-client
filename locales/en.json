@@ -15,6 +15,14 @@
             "equipment": "Equipment"
         },
         "service": "Services",
+        "News":{
+            "name": "Tin tức",
+            "RandD":"Nghiên cứu ứng dụng",
+            "internalNews": "Tin tức nội bộ",
+            "specializedNews": "Tin tức chuyên ngành",
+            "countryNews": "Tin trong nước",
+            "foreignNews": "Tin quốc tế"
+        },
         "search": "Search",
         "english": "English",
         "vietnamese": "Vietnames"
@@ -29,7 +37,7 @@
     "backtop": {},
     "home": {
         "title": "Welcome",
-        "introduction": "This is an introduction in English."
+        "introduction": "introduction"
     },
     "about": {
         "title": "About",

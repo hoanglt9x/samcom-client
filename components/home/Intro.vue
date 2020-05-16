@@ -13,7 +13,7 @@
               {{ $t('home.introduction').toUpperCase() }}
             </h2>
             <h3 style="font-style:normal; font-weight:700; text-align:center;">
-              Công ty TNHH MTV Trắc địa Bản đồ
+              {{ $t('company.name') }}
             </h3>
             <hr />
             <p style="text-align:justify; font-weight:bold">
@@ -32,7 +32,7 @@
               năm 2017.
               <br />
               - Chứng chỉ ISO 9001:2015 số 2018-QMS-8032 do BVQA cấp ngày 03
-              tháng 5 năm 2018 .
+              tháng 5 năm 2018.
             </p>
             <ul style="text-align:justify">
               <li>

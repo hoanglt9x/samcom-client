@@ -13,8 +13,16 @@
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
-            <b-nav-item to="/">{{ $t('links.home') }}</b-nav-item>
-            <b-nav-item-dropdown :text="$t('links.about.name')" right>
+            <!-- Home -->
+            <b-nav-item to="/" active exact>{{
+              $t('links.home').toUpperCase()
+            }}</b-nav-item>
+
+            <!-- About -->
+            <b-nav-item-dropdown
+              :text="$t('links.about.name').toUpperCase()"
+              right
+            >
               <b-dropdown-item v-scroll-to="'#about'"
                 >{{ $t('links.about.general') }}
               </b-dropdown-item>
@@ -37,8 +45,32 @@
                 $t('links.about.equipment')
               }}</b-dropdown-item>
             </b-nav-item-dropdown>
-            <b-nav-item to="/about">{{ $t('links.about.name') }}</b-nav-item>
-            <b-nav-item href="/about">Disabled</b-nav-item>
+
+            <!-- Service -->
+            <b-nav-item v-scroll-to="'#services'">{{
+              $t('links.service').toUpperCase()
+            }}</b-nav-item>
+
+            <!-- Blog -->
+            <b-nav-item-dropdown
+              :text="$t('links.News.name').toUpperCase()"
+              right
+            >
+              <b-dropdown-item>{{ $t('links.News.RandD') }} </b-dropdown-item>
+              <b-dropdown-item v-b-scrollspy:contact to="/">{{
+                $t('links.News.internalNews')
+              }}</b-dropdown-item>
+              <b-dropdown-item to="/">{{
+                $t('links.News.specializedNews')
+              }}</b-dropdown-item>
+              <b-dropdown-item to="/">{{
+                $t('links.News.countryNews')
+              }}</b-dropdown-item>
+              <b-dropdown-item to="/">{{
+                $t('links.News.foreignNews')
+              }}</b-dropdown-item>
+            </b-nav-item-dropdown>
+
             <b-nav-form>
               <b-form-input
                 size="sm"
@@ -77,10 +109,25 @@ export default {}
 </script>
 
 <style scoped>
-.navbar {
-  background-color: black;
+.nav-item-dropdown {
+  color: white !important;
 }
-.nav-item {
-  color: yellow;
+.bg-dark {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+.navbar-nav {
+  color: white !important;
+  font-weight: bold;
+}
+.nav-link.active {
+  color: yellow !important;
+  font-weight: bold !important;
+}
+.nav-link {
+  color: white !important;
+  font-weight: bold !important;
+}
+li:hover {
+  color: yellowgreen !important;
 }
 </style>
