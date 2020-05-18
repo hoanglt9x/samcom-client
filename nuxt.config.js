@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+
 export default {
     mode: 'universal',
     /*
@@ -48,6 +49,9 @@ export default {
             // { src: 'https://unpkg.com/swiper/js/swiper.min.js' }
         ]
     },
+    env: {
+        strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
+    },
     /*
      ** Customize the progress-bar color
      */
@@ -88,6 +92,7 @@ export default {
         'nuxt-material-design-icons',
         // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
+        '@nuxtjs/apollo',
         '@nuxtjs/pwa',
         'vue-scrollto/nuxt',
         // Doc: https://github.com/nuxt-community/dotenv-module
@@ -99,6 +104,13 @@ export default {
             }
         ]
     ],
+    apollo: {
+        clientConfigs: {
+            default: {
+                httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+            }
+        }
+    },
     bootstrapVue: {
         icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
     },

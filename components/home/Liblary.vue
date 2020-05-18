@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      isVideo: 'Video'
+      isVideo: 'Anh'
     }
   },
   methods: {

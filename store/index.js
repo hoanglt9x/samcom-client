@@ -1,5 +1,5 @@
 export const state = () => ({
-  locale: 'en',
+  locale: 'vi',
   locales: ['vi', 'en'],
   anhInfo: '/images/BackgroundInforDefault.jpg'
 })

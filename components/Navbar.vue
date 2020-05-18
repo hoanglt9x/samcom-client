@@ -112,8 +112,14 @@ export default {}
 .nav-item-dropdown {
   color: white !important;
 }
+.nav-item {
+  color: white !important;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
 .bg-dark {
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 .navbar-nav {
   color: white !important;
@@ -129,5 +135,9 @@ export default {}
 }
 li:hover {
   color: yellowgreen !important;
+}
+span {
+  color: white !important;
+  font-weight: bold !important;
 }
 </style>

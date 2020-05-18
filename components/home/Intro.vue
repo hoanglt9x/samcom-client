@@ -17,45 +17,43 @@
             </h3>
             <hr />
             <p style="text-align:justify; font-weight:bold">
-              Tên giao dịch với nước ngoài: Survey and Aerial Mapping One Member
-              Limited Liability Company (SAMCOM Co.Ltd) - Giấy chứng nhận Đăng
-              ký kinh doanh Số: 0100107211 do phòng ĐKKD / Sở Kế hoạch và Đầu tư
-              Thành phố Hà Nội cấp ngày 08 tháng 11 năm 2010 và đăng ký thay đổi
-              lần 4 ngày 08 tháng 11 năm 2016.
+              {{ $t('Introduction.Intro') }}
             </p>
             <p style="text-align:justify">
-              - Giấy phép hoạt động Đo đạc và Bản đồ số 1786 do Cục Đo đạc và
-              Bản đồ Việt Nam cấp ngày 25 tháng 10 năm 2017.
+              {{ $t('Introduction.License1') }}
               <br />
-              - Chứng chỉ năng lực hoạt động xây dựng hạng I số BXD-00002948 do
-              Cục Quản lý hoạt động xây dựng - Bộ Xây dựng cấp ngày 09 tháng 8
-              năm 2017.
+              {{ $t('Introduction.License2') }}
               <br />
-              - Chứng chỉ ISO 9001:2015 số 2018-QMS-8032 do BVQA cấp ngày 03
-              tháng 5 năm 2018.
+              {{ $t('Introduction.License3') }}
             </p>
             <ul style="text-align:justify">
               <li>
                 <b-icon icon="check-circle"></b-icon>
-                <a style="font-weight:bold"> Trụ sở chính</a>
+                <a style="font-weight:bold">
+                  {{ $t('Introduction.Headquarter') }}</a
+                >
                 <p>
-                  Địa chỉ: 2/198 Đường Trần Cung - Quận Bắc Từ Liêm - TP. Hà Nội
+                  {{ $t('Introduction.AddressHeadquarter') }}
                   <br />
-                  Điện thoại: (024) 3.755.8092 - Fax: (024) 3.755.8093 <br />
-                  Website: samcom.com.vn; Email: info@samcom.com.vn
+                  {{ $t('Introduction.ContactHeadquarter') }}<br />
+                  {{ $t('Introduction.Contact1Headquarter') }}
                 </p>
 
                 <b-icon icon="check-circle"></b-icon>
-                <a style="font-weight:bold"> Chi nhánh miền Nam</a>
+                <a style="font-weight:bold">
+                  {{ $t('Introduction.SouthernBranch') }}</a
+                >
                 <p>
-                  Địa chỉ: Số 2 Cửu Long Q. Tân Bình- TP.HCM
-                  <br />Điện thoại: (028).3.811.0058 - Fax: (028) 3.811.0564
+                  {{ $t('Introduction.AddressSouthernBranch') }}
+                  <br />{{ $t('Introduction.ContactSouthernBranch') }}
                 </p>
                 <b-icon icon="check-circle"></b-icon>
-                <a style="font-weight:bold"> Chi nhánh miền Trung</a>
+                <a style="font-weight:bold">
+                  {{ $t('Introduction.MiddleregionBranch') }}</a
+                >
                 <p>
-                  Địa chỉ: số 14 Yersin - TP. Đà Lạt - tỉnh Lâm Đồng
-                  <br />Điện thoại : (0263).826.016 - Fax: (026) 3.825.747
+                  {{ $t('Introduction.AddressMiddleregionBranch') }}
+                  <br />{{ $t('Introduction.ContactMiddleregionBranch') }}
                 </p>
               </li>
             </ul>
