@@ -3,13 +3,13 @@
     <div class="box" :style="{ 'background-image': 'url(' + anhNen + ')' }">
       <div class="overlay2">
         <h4 class="title2">
-          {{ tieuDe }}
+          {{ tieuDe.toUpperCase() }}
         </h4>
       </div>
 
       <div class="overlay">
         <h4 class="title">
-          <nuxt-link :to="link">{{ tieuDe }}</nuxt-link>
+          <nuxt-link :to="link">{{ tieuDe.toUpperCase() }}</nuxt-link>
         </h4>
         <p class="description">
           {{ moTa }}

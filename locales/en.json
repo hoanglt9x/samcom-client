@@ -1,6 +1,9 @@
 {
     "company": {
-        "name": "Survey And Aerial Mapping One Member Limited Liability"
+        "name": "Survey And Aerial Mapping One Member Limited Liability",
+        "p1": "Survey And Aerial Mapping",
+        "p2": "One Member Limited Liability",
+        "sologan": "cooperation for development!"
     },
     "links": {
         "home": "Home",
@@ -16,13 +19,18 @@
         },
         "service": "Services",
         "News": {
-            "name": "Tin tức",
+            "name": "News",
             "RandD": "Nghiên cứu ứng dụng",
             "internalNews": "Tin tức nội bộ",
             "specializedNews": "Tin tức chuyên ngành",
             "countryNews": "Tin trong nước",
             "foreignNews": "Tin quốc tế"
         },
+        "Project": "Projects",
+        "Team": "Team",
+        "Gallery": "Gallery",
+        "Contact": "contact",
+        "Email": "Email",
         "search": "Search",
         "english": "English",
         "vietnamese": "Vietnames"
@@ -55,26 +63,65 @@
         "description": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích."
     },
     "media": {
-        "title": "HOẠT ĐỘNG",
-        "image": "Hình ảnh",
-        "video": "Video"
-
+        "title": "GALLERY",
+        "image": "Images",
+        "video": "Videos"
     },
     "Introduction": {
         "title": "Company profile",
-        "Intro": "Survey and Aerial Mapping One Member Limited Liability Company (SAMCOM Co.Ltd) - Business Certificate Registration Number: 0100107211 issued by Department of Planning and Investment of Hanoi on November 8th, 2010, the fourth change of registration o November 8th, 2016",
-        "License1": "- Survey and mapping certificate No: 1786, issued by the Surveying, Mapping and GIS-Ministry of Natural Resources and Environment on October 25th, 2017.",
-        "License2": "- Certificate of Survey for Construction Operation No: BXD-00002948 issued by Construction Management Agency-Ministry of Construction on 9th August 2017.",
+        "Intro": "Survey and Aerial Mapping One Member Limited Liability Company (SAMCOM Co.Ltd) - Business Certificate Registration Number: 0100107211 issued by Department of Planning and Investment of Hanoi on November 8th, 2010, the fourth change of registration on November 8th, 2016",
+        "License1": "- Survey and mapping certificate No: 1786, issued by the Surveying, Mapping and GIS - Ministry of Natural Resources and Environment on October 25th, 2017.",
+        "License2": "- Certificate of Survey for Construction Operation No: BXD-00002948 issued by Construction Management Agency - Ministry of Construction on 9th August 2017.",
         "License3": "- ISO 9001:2015 No: 2018-QMS-8032 certified by BVQA on 3rd May 2018.",
-        "AddressHeadquarter": "Address: 2/198 Tran Cung street – Bac Tu Liem district- Hanoi capital.",
+        "AddressHeadquarter": "Address: 2/198 Tran Cung street – Bac Tu Liem district – Hanoi capital.",
         "Headquarter": "Headquarter",
         "ContactHeadquarter": "Tel: (+84) 24 3 755 8092 - Fax: (+84) 24 3 755 8093",
         "Contact1Headquarter": "Website: samcom.com.vn; Email: info@samcom.com.vn",
         "SouthernBranch": "Southern Branch",
         "AddressSouthernBranch": "Address: No. 2 Cuu Long street. Tan Binh district, Ho Chi Minh City",
-        "ContactSouthernBranch": "Tel: (+84) 28 3 811 0058 - Fax: (+84) 283 811 0564",
+        "ContactSouthernBranch": "Tel: (+84)283.811.0058 - Fax: (+84)283.811.0564",
         "MiddleregionBranch": "Middle region Branch",
-        "AddressMiddleregionBranch": "Address: No. 14 Yersin street-  Da Lat city- Lam Dong Province",
-        "ContactMiddleregionBranch": "Tel: (+84) 263 826 016 - Fax: (+84) 263 825 747"
+        "AddressMiddleregionBranch": "Address: No. 14 Yersin street – Da Lat city – Lam Dong Province",
+        "ContactMiddleregionBranch": "Tel: (+84)263.826.016 - Fax: (+84)263.825.747"
+    },
+    "partner": {
+        "title": "PARTNER",
+        "AerialPhotography": "Aerial Photography",
+        "AerialPhotographyDes": "Công ty TNHH MTV Trắc địa Bản đồ đã và đang áp dụng nhiều phương tiện bay chụp ảnh hàng không hiện đại.",
+        "FieldSurveying": "ĐO ĐẠC NGOẠI NGHIỆP",
+        "FieldSurveyingDes": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích.",
+        "Database": "XÂY DỰNG CƠ SỞ DỮ LIỆU NỀN ĐỊA LÝ",
+        "DatabaseDes": "Công ty TNHH MTV Trắc địa Bản đồ là một trong những đơn vị đi đầu trong lĩnh vực xây dựng CSDL địa lý theo quy trình khép kín: Từ khâu đo vẽ dữ liệu không gian dạng 2D, 3D; điều tra bổ sung ngoại nghiệp đến khâu kiểm soát chất lượng và biên tập bản đồ chế in.",
+        "Mapping": "THÀNH LẬP BẢN ĐỒ",
+        "MappingDes": "Công ty TNHH MTV Trắc địa Bản đồ đang ứng dụng các quy trình công nghệ hiện đại trong công tác thành lập các loại bản đồ phục vụ các mục đích quốc phòng và các ngành kinh tế khác nhau.",
+        "PrintingIndustry": "IN CÔNG NGHIỆP",
+        "PrintingIndustryDes": "Công ty TNHH MTV Trắc địa Bản đồ có công nghệ in tiên tiến nhất tại Việt Nam trong lĩnh vực in Offset tờ rời, được đầu tư trang bị khép kín từ khâu thiết kế, tạo mẫu, xuất kẽm, in ấn đến các công đoạn sau in, hoàn thiện sản phẩm.",
+        "RemoteSensing": "VIỄN THÁM",
+        "RemoteSensingDes": "Phục vụ các mực đích làm bản đồ địa hình, bản đồ 3D các loại tỷ lệ, bản đồ biên giới, địa giới, các chương trình biển đảo, các nhiệm vụ quốc phòng, tìm kiếm cứu hộ cứu nạn, đánh giá tác động môi trường, dự báo xói lở, điều tra nông nghiệp, lâm nghiệp, quy hoạch xây dựng đô thị, xây dựng thủy điện, đường dây tuyến ống dẫn, quản lý kiểm kê đất đai."
+    },
+    "service": {
+        "title": "SERVICES",
+        "AerialPhotography": "Aerial Photography",
+        "AerialPhotographyDes": "At present, the Surveying and Aerial Mapping Co., Ltd. has been applying many modern aerial photography Currently, SAMCOM has been applying many modern aerial photography vehicles including the Vexcel Ultracam Xp Wa Digital Camera System mounted on large aircraft, It is capable of operating at altitudes above 7 km, this is the only modern aerial photography system in Vietnam.",
+        "FieldSurveying": "Field Surveying",
+        "FieldSurveyingDes": "With modern terrestrial measurement equipments has been continuously invested with a team of experienced technicians, SAMCOM is a prestigious company in the field of surveying.",
+        "Database": "Database",
+        "DatabaseDes": "Since the 1980s, the Surveying and Aerial Mapping Co., Ltd. has been approached with optical satellite imagery and found that this is a highly applicable resource for geodetic map.",
+        "Mapping": "Mapping",
+        "MappingDes": "MAPPING SAMCOM is applying modern technology procedure for establish of maps for defense and other economic purposes. - Establish a topographic map of all types of scale from aerial photos, satellite images - Establish a large scale map by field surveying method - Updated and adjust topographic maps from defferent materials.",
+        "PrintingIndustry": "Printing Industry",
+        "PrintingIndustryDes": "The printing technology at SAMCOM is one of the most advanced printing technologies in Vietnam in the field of offset printing, which is equipped with closed equipment from design, modeling, zinc production, printing to the after printing stage, finishing products.",
+        "RemoteSensing": "Remote Sensing",
+        "RemoteSensingDes": "Since the 1980s, the Surveying and Aerial Mapping Co., Ltd. has been approached with optical satellite imagery and found that this is a highly applicable resource for geodetic map."
+    },
+    "contact": {
+        "title": "CONTACT",
+        "Address1": "No 2/198 Tran Cung street",
+        "Address2": "Bac Tu Liem district - Hanoi capital",
+        "name": "Your name",
+        "email": "Your email",
+        "titlemail": "Title",
+        "content": "Content",
+        "send": "Send message"
     }
 }

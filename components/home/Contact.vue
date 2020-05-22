@@ -3,7 +3,7 @@
     <b-container fluid>
       <div class="section-header">
         <hr />
-        <h3>LIÊN HỆ</h3>
+        <h3>{{ $t('contact.title') }}</h3>
       </div>
       <div class="row wow fadeInUp">
         <div class="col-lg-6">
@@ -20,8 +20,8 @@
             <div class="col-md-5 info">
               <b-icon icon="building"></b-icon>
               <p>
-                Số 2/198 đường Trần Cung,<br />
-                Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội
+                {{ $t('contact.Address1') }}<br />
+                {{ $t('contact.Address2') }}
               </p>
             </div>
             <div class="col-md-4 info">
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="form">
-            <div id="sendmessage">Tin nhắn của bạn đã được gửi. Cảm ơn!</div>
+            <!-- <div id="sendmessage">Tin nhắn của bạn đã được gửi. Cảm ơn!</div> -->
             <div id="errormessage" />
             <form action method="post" role="form" class="contactForm">
               <div class="form-row">
@@ -48,7 +48,7 @@
                     type="text"
                     name="name"
                     class="form-control"
-                    placeholder="Tên của bạn"
+                    :placeholder="$t('contact.name')"
                     data-rule="minlen:4"
                     data-msg="Tối thiểu 4 ký tự"
                   />
@@ -60,7 +60,7 @@
                     type="email"
                     class="form-control"
                     name="email"
-                    placeholder="Địa chỉ mail của bạn"
+                    :placeholder="$t('contact.email')"
                     data-rule="email"
                     data-msg="Vui lòng nhập đúng địa chỉ email của bạn"
                   />
@@ -73,7 +73,7 @@
                   type="text"
                   class="form-control"
                   name="subject"
-                  placeholder="Tiêu đề"
+                  :placeholder="$t('contact.titlemail')"
                   data-rule="minlen:4"
                   data-msg="Tối thiểu 8 ký tự"
                 />
@@ -87,13 +87,15 @@
                   data-rule="required"
                   data-msg="Vui lòng viết nội dung gì đó cho
                 chúng tôi"
-                  placeholder="Nội dung"
+                  :placeholder="$t('contact.content')"
                   defaultValue=""
                 />
                 <div class="validation" />
               </div>
               <div class="text-center">
-                <button type="submit" title="Send Message">Gửi tin nhắn</button>
+                <button type="submit" title="Send Message">
+                  {{ $t('contact.send') }}
+                </button>
               </div>
             </form>
           </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <component-navbar /> -->
+    <component-navbar />
     <component-info-overlay />
     <!-- <component-header /> -->
     <nuxt />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-// import componentNavbar from '~/components/Navbar.vue'
+import componentNavbar from '~/components/Navbar.vue'
 import componentContact from '~/components/home/Contact.vue'
 import componentFooter from '~/components/Footer.vue'
 import componentBacktop from '~/components/BackTop.vue'
@@ -19,7 +19,7 @@ import componentInfoOverlay from '~/components/InfoOverlay.vue'
 export default {
   components: {
     // componentHeader,
-    // componentNavbar,
+    componentNavbar,
     componentInfoOverlay,
     componentFooter,
     componentBacktop,

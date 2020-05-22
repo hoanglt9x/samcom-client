@@ -7,10 +7,18 @@
       <div class="row">
         <div class="col-lg-12">
           <ul id="portfolio-flters">
-            <li class="filter-active" @click="changActive('Anh')">
+            <li
+              :class="{ 'filter-active': isVideo === 'Anh' }"
+              @click="changeActive('Anh')"
+            >
               {{ $t('media.image') }}
             </li>
-            <li @click="changActive('Video')">{{ $t('media.video') }}</li>
+            <li
+              :class="{ 'filter-active': isVideo === 'Video' }"
+              @click="changeActive('Video')"
+            >
+              {{ $t('media.video') }}
+            </li>
           </ul>
         </div>
       </div>
@@ -38,10 +46,9 @@ export default {
     }
   },
   methods: {
-    // changeActive(value) {
-    //   // eslint-disable-next-line no-undef
-    //   isVideo = value
-    // }
+    changeActive(value) {
+      this.isVideo = value
+    }
   }
 }
 </script>
@@ -73,6 +80,7 @@ export default {
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
   color: #1bb1dc;
+  text-decoration: underline;
 }
 
 #portfolio #portfolio-flters li:last-child {

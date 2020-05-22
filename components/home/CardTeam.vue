@@ -81,13 +81,13 @@ export default {
   transition: height 0.4s;
 }
 
-#team .member:hover .member-info {
+/* #team .member:hover .member-info {
   transition: 0.4s;
 }
 
 #team .member:hover .member-info-content {
   height: 80px;
-}
+} */
 
 #team .member h4 {
   font-weight: 700;

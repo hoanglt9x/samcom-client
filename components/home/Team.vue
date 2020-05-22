@@ -2,7 +2,7 @@
   <section id="team" class="section-bg">
     <div class="container">
       <div class="section-header">
-        <h3>LÃNH ĐẠO</h3>
+        <h3>{{ $t('links.Team').toUpperCase() }}</h3>
         <hr />
       </div>
       <diV class="row justify-content-md-center">

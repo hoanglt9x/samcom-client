@@ -1,6 +1,9 @@
 {
     "company": {
-        "name": "Công ty TNHH MTV Trắc địa Bản đồ"
+        "name": "Công ty TNHH MTV Trắc địa Bản đồ",
+        "p1": "Công ty TNHH MTV",
+        "p2": "Trắc địa Bản đồ",
+        "sologan": "hợp tác cùng phát triển!"
     },
     "links": {
         "home": "Trang chủ",
@@ -23,6 +26,11 @@
             "countryNews": "Tin trong nước",
             "foreignNews": "Tin quốc tế"
         },
+        "Project": "Dự án",
+        "Team": "Lãnh đạo",
+        "Gallery": "Thư viện",
+        "Contact": "Liên hệ",
+        "Email": "Email",
         "search": "Tìm kiếm",
         "english": "Tiếng Anh",
         "vietnamese": "Tiếng Việt"
@@ -34,9 +42,7 @@
         "designBy": "Thiết kế bởi",
         "content": "Phòng Kỹ thuật - Công nghệ"
     },
-    "backtop": {
-
-    },
+    "backtop": {},
     "home": {
         "title": "Xin chào",
         "introduction": "Giới thiệu"
@@ -57,10 +63,9 @@
         "description": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích."
     },
     "media": {
-        "title": "HOẠT ĐỘNG",
+        "title": "THƯ VIỆN",
         "image": "Hình ảnh",
         "video": "Video"
-
     },
     "Introduction": {
         "title": "Giới thiệu",
@@ -78,5 +83,45 @@
         "MiddleregionBranch": "Chi nhánh miền Trung",
         "AddressMiddleregionBranch": "Địa chỉ: số 14 Yersin - TP. Đà Lạt - tỉnh Lâm Đồng",
         "ContactMiddleregionBranch": "Điện thoại : (0263).826.016 - Fax: (026) 3.825.747"
+    },
+    "partner": {
+        "title": "ĐỐI TÁC",
+        "AerialPhotography": "BAY CHỤP ẢNH",
+        "AerialPhotographyDes": "Công ty TNHH MTV Trắc địa Bản đồ đã và đang áp dụng nhiều phương tiện bay chụp ảnh hàng không hiện đại.",
+        "FieldSurveying": "ĐO ĐẠC NGOẠI NGHIỆP",
+        "FieldSurveyingDes": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích.",
+        "Database": "XÂY DỰNG CƠ SỞ DỮ LIỆU NỀN ĐỊA LÝ",
+        "DatabaseDes": "Công ty TNHH MTV Trắc địa Bản đồ là một trong những đơn vị đi đầu trong lĩnh vực xây dựng CSDL địa lý theo quy trình khép kín: Từ khâu đo vẽ dữ liệu không gian dạng 2D, 3D; điều tra bổ sung ngoại nghiệp đến khâu kiểm soát chất lượng và biên tập bản đồ chế in.",
+        "Mapping": "THÀNH LẬP BẢN ĐỒ",
+        "MappingDes": "Công ty TNHH MTV Trắc địa Bản đồ đang ứng dụng các quy trình công nghệ hiện đại trong công tác thành lập các loại bản đồ phục vụ các mục đích quốc phòng và các ngành kinh tế khác nhau.",
+        "PrintingIndustry": "IN CÔNG NGHIỆP",
+        "PrintingIndustryDes": "Công ty TNHH MTV Trắc địa Bản đồ có công nghệ in tiên tiến nhất tại Việt Nam trong lĩnh vực in Offset tờ rời, được đầu tư trang bị khép kín từ khâu thiết kế, tạo mẫu, xuất kẽm, in ấn đến các công đoạn sau in, hoàn thiện sản phẩm.",
+        "RemoteSensing": "VIỄN THÁM",
+        "RemoteSensingDes": "Phục vụ các mực đích làm bản đồ địa hình, bản đồ 3D các loại tỷ lệ, bản đồ biên giới, địa giới, các chương trình biển đảo, các nhiệm vụ quốc phòng, tìm kiếm cứu hộ cứu nạn, đánh giá tác động môi trường, dự báo xói lở, điều tra nông nghiệp, lâm nghiệp, quy hoạch xây dựng đô thị, xây dựng thủy điện, đường dây tuyến ống dẫn, quản lý kiểm kê đất đai."
+    },
+    "service": {
+        "title": "ĐỐI TÁC",
+        "AerialPhotography": "BAY CHỤP ẢNH",
+        "AerialPhotographyDes": "Công ty TNHH MTV Trắc địa Bản đồ đã và đang áp dụng nhiều phương tiện bay chụp ảnh hàng không hiện đại.",
+        "FieldSurveying": "ĐO ĐẠC NGOẠI NGHIỆP",
+        "FieldSurveyingDes": "Công ty TNHH MTV là một đơn vị có uy tín trong lĩnh vực đo đạc ngoại nghiệp phục vụ đa mục đích.",
+        "Database": "XÂY DỰNG CƠ SỞ DỮ LIỆU NỀN ĐỊA LÝ",
+        "DatabaseDes": "Công ty TNHH MTV Trắc địa Bản đồ là một trong những đơn vị đi đầu trong lĩnh vực xây dựng CSDL địa lý theo quy trình khép kín: Từ khâu đo vẽ dữ liệu không gian dạng 2D, 3D; điều tra bổ sung ngoại nghiệp đến khâu kiểm soát chất lượng và biên tập bản đồ chế in.",
+        "Mapping": "THÀNH LẬP BẢN ĐỒ",
+        "MappingDes": "Công ty TNHH MTV Trắc địa Bản đồ đang ứng dụng các quy trình công nghệ hiện đại trong công tác thành lập các loại bản đồ phục vụ các mục đích quốc phòng và các ngành kinh tế khác nhau.",
+        "PrintingIndustry": "IN CÔNG NGHIỆP",
+        "PrintingIndustryDes": "Công ty TNHH MTV Trắc địa Bản đồ có công nghệ in tiên tiến nhất tại Việt Nam trong lĩnh vực in Offset tờ rời, được đầu tư trang bị khép kín từ khâu thiết kế, tạo mẫu, xuất kẽm, in ấn đến các công đoạn sau in, hoàn thiện sản phẩm.",
+        "RemoteSensing": "VIỄN THÁM",
+        "RemoteSensingDes": "Phục vụ các mực đích làm bản đồ địa hình, bản đồ 3D các loại tỷ lệ, bản đồ biên giới, địa giới, các chương trình biển đảo, các nhiệm vụ quốc phòng, tìm kiếm cứu hộ cứu nạn, đánh giá tác động môi trường, dự báo xói lở, điều tra nông nghiệp, lâm nghiệp, quy hoạch xây dựng đô thị, xây dựng thủy điện, đường dây tuyến ống dẫn, quản lý kiểm kê đất đai."
+    },
+    "contact": {
+        "title": "LIÊN HỆ",
+        "Address1": "Số 2/198 đường Trần Cung,",
+        "Address2": "Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội",
+        "name": "Tên của bạn",
+        "email": "Địa chỉ email của bạn",
+        "titlemail": "Tiêu đề",
+        "content": "Nội dung",
+        "send": "Gửi tin nhắn"
     }
 }

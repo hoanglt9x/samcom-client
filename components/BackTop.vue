@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a id="backiop" @click="scrollToTop"
+    <a id="backtop" @click="scrollToTop"
       ><b-icon
         v-b-tooltip.hover.left="'Đầu trang'"
         icon="chevron-double-up"
@@ -52,6 +52,7 @@ export default {
   bottom: 15px;
   transition: background 0.5s;
   z-index: 11;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .back-to-top2 {
@@ -68,6 +69,7 @@ export default {
   bottom: 62px;
   transition: background 0.5s;
   z-index: 11;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .back-to-top2 i {
