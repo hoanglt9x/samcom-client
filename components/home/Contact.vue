@@ -118,6 +118,8 @@ export default {}
   border: 0;
   width: 100%;
   height: 370px;
+  background-image: url('/images/backgroundmap.jpg');
+  background-size: cover;
 }
 #contact {
   /* box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1); */

@@ -1,9 +1,13 @@
 <template>
-  <section id="portfolio">
+  <section id="portfolio" class="section-bg">
     <div class="container">
-      <header class="section-header">
+      <div class="section-header">
+        <h3>{{ $t('media.title').toUpperCase() }}</h3>
+        <hr />
+      </div>
+      <!-- <header class="section-header">
         <h3 class="section-title">{{ $t('media.title') }}</h3>
-      </header>
+      </header> -->
       <div class="row">
         <div class="col-lg-12">
           <ul id="portfolio-flters">

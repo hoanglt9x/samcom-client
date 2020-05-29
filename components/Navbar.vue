@@ -37,13 +37,13 @@
               <b-dropdown-item @click="routerTab('letter', 1)">{{
                 $t('links.about.open-letter')
               }}</b-dropdown-item>
-              <b-dropdown-item to="/" @click="activeNav(1)">{{
+              <b-dropdown-item @click="activeNav(1)">{{
                 $t('links.about.thanhvien')
               }}</b-dropdown-item>
-              <b-dropdown-item to="/" @click="activeNav(1)">{{
+              <b-dropdown-item @click="routerTab('history', 1)">{{
                 $t('links.about.history')
               }}</b-dropdown-item>
-              <b-dropdown-item to="/" @click="activeNav(1)">{{
+              <b-dropdown-item @click="routerTab('company-struct', 1)">{{
                 $t('links.about.companyStruct')
               }}</b-dropdown-item>
               <b-dropdown-item to="/" @click="activeNav(1)">{{
@@ -70,7 +70,7 @@
               :class="{ active: navItem === 3 }"
             >
               <!-- <b-dropdown-item>{{ $t('links.News.RandD') }} </b-dropdown-item> -->
-              <b-dropdown-item to="/" @click="activeNav(3)">{{
+              <b-dropdown-item @click="routerTab('blog', 3)">{{
                 $t('links.News.internalNews')
               }}</b-dropdown-item>
               <!-- <b-dropdown-item to="/">{{
@@ -86,7 +86,7 @@
 
             <!-- Project -->
             <b-nav-item
-              v-scroll-to="'#services'"
+              v-scroll-to="'#projects'"
               to="/"
               :class="{ active: navItem === 4 }"
               @click="activeNav(4)"

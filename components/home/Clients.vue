@@ -1,8 +1,8 @@
 <template>
-  <section id="clients" class="section-bg">
+  <section id="clients">
     <div class="container">
       <header class="section-header">
-        <h3>ĐỐI TÁC</h3>
+        <h3>{{ $t('partner.title').toUpperCase() }}</h3>
         <hr />
       </header>
 

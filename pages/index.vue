@@ -2,6 +2,8 @@
   <main id="main">
     <component-Intro />
     <component-service />
+    <component-project />
+    <component-blog-home />
     <component-team />
     <component-liblary />
     <component-client />
@@ -16,6 +18,8 @@ import componentService from '~/components/home/Service.vue'
 import componentTeam from '~/components/home/Team.vue'
 import componentClient from '~/components/home/Clients.vue'
 import componentLiblary from '~/components/home/Liblary.vue'
+import componentProject from '~/components/home/Project.vue'
+import componentBlogHome from '~/components/home/BlogHome.vue'
 export default {
   components: {
     componentContact,
@@ -23,7 +27,9 @@ export default {
     componentService,
     componentTeam,
     componentClient,
-    componentLiblary
+    componentLiblary,
+    componentProject,
+    componentBlogHome
   },
   head() {
     return {

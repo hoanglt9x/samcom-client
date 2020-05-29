@@ -1,7 +1,7 @@
 export const state = () => ({
   locale: 'vi',
   locales: ['vi', 'en'],
-  anhInfo: '/images/BackgroundInforDefault.jpg',
+  anhInfo: '/4.jpg',
   navItem: 0
 })
 
@@ -13,5 +13,8 @@ export const mutations = {
   },
   setNavItem(state, value) {
     state.navItem = value
+  },
+  setImageLayout(state, image) {
+    state.anhInfo = image
   }
 }

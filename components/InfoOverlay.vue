@@ -2,7 +2,7 @@
   <div>
     <b-card
       overlay
-      img-src="https://picsum.photos/900/250/?image=3"
+      :img-src="$store.state.anhInfo"
       :img-alt="altImage"
       text-variant="white"
       :title="title"
@@ -33,4 +33,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+img {
+  height: 70vh;
+  background-size: cover;
+}
+</style>

@@ -84,7 +84,7 @@ export default {
 
 #about .about-content h2 {
   color: #413e66;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-weight: 700;
 }
 

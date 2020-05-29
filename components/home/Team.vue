@@ -1,21 +1,21 @@
 <template>
-  <section id="team" class="section-bg">
+  <section id="team">
     <div class="container">
       <div class="section-header">
         <h3>{{ $t('links.Team').toUpperCase() }}</h3>
         <hr />
       </div>
-      <diV class="row justify-content-md-center">
+      <div class="row justify-content-md-center">
         <component-card-team
           hinh-anh="images/Team/Dinh.jpg"
           ten="Nguyễn An Định"
           vi-tri="Chủ tịch"
         />
-      </diV>
+      </div>
       <div class="row">
         <component-card-team
-          hinh-anh="images/Team/Duc.jpg"
-          ten="Nguyễn Minh Đức"
+          hinh-anh="images/Team/Ha.jpg"
+          ten="Nguyễn Đức Hà"
           vi-tri="Phó giám đốc"
         />
         <component-card-team
@@ -24,13 +24,13 @@
           vi-tri="Phó giám đốc"
         />
         <component-card-team
-          hinh-anh="images/Team/Ha.jpg"
-          ten="Nguyễn Đức Hà"
+          hinh-anh="images/Team/DuongDanhThiet.jpg"
+          ten="Dương Danh Thiết"
           vi-tri="Phó giám đốc"
         />
         <component-card-team
-          hinh-anh="images/Team/DuongDanhThiet.jpg"
-          ten="Dương Danh Thiết"
+          hinh-anh="images/Team/Duc.jpg"
+          ten="Nguyễn Minh Đức"
           vi-tri="Phó giám đốc"
         />
       </div>
