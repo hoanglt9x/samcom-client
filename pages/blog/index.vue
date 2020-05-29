@@ -17,6 +17,7 @@
 <script>
 import componentRightSidebar from '~/components/blog/BlogRightSidebar.vue'
 import componentLeftSidebar from '~/components/blog/BlogLeftSidebar.vue'
+import articlesQuery from '~/apollo/queries/article/articles'
 export default {
   layout: 'infomation',
   components: {

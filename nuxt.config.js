@@ -3,6 +3,9 @@ export default {
   /*
    ** Headers of the page
    */
+  env: {
+    strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -89,6 +92,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/apollo',
     'vue-scrollto/nuxt',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
@@ -100,6 +104,13 @@ export default {
       }
     ]
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+      }
+    }
+  },
   bootstrapVue: {
     icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
   },
@@ -109,7 +120,7 @@ export default {
    */
   axios: {},
   server: {
-    port: 80, // default: 3000
+    port: 8080, // default: 3000
     host: '0.0.0.0' // default: localhost
   },
   /*
