@@ -3,7 +3,7 @@
     <component-navbar />
     <!-- <component-header /> -->
     <component-video-overlay />
-    <nuxt />
+    <nuxt keep-alive />
     <component-footer />
     <component-backtop />
   </div>

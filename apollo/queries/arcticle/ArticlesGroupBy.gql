@@ -1,0 +1,20 @@
+query ArcticlesGroupBy {
+  articlesConnection(
+    where: {
+      Display: true
+      mota_ne: ""
+      category: { name_nin: ["Dự án", "Giới thiệu"] }
+    }
+  ) {
+    groupBy {
+      category {
+        key
+        connection {
+          aggregate {
+            count
+          }
+        }
+      }
+    }
+  }
+}

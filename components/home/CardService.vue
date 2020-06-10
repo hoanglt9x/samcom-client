@@ -1,5 +1,6 @@
 <template>
-  <div class="col-md-6 col-lg-4 ">
+  <nuxt-link :to="link" tag="div" class="col-md-6 col-lg-4">
+    <!-- <div class="col-md-6 col-lg-4 "> -->
     <div class="box" :style="{ 'background-image': 'url(' + anhNen + ')' }">
       <div class="overlay2">
         <h4 class="title2">
@@ -16,7 +17,8 @@
         </p>
       </div>
     </div>
-  </div>
+    <!-- </div> -->
+  </nuxt-link>
 </template>
 
 <script>
@@ -55,6 +57,7 @@ export default {
   text-align: center;
   background-size: cover;
   height: 240px;
+  cursor: pointer;
 }
 
 #services .box:hover {

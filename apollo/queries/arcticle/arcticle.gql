@@ -1,0 +1,22 @@
+query articleOne($tenbai: String!) {
+  articles(where: { Slug: $tenbai }) {
+    title
+    Slug
+    image {
+      url
+    }
+    content
+    created_at
+    category {
+      name
+      Slug
+    }
+    authors {
+      id
+      name
+      image {
+        url
+      }
+    }
+  }
+}

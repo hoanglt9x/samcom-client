@@ -1,21 +1,23 @@
 <template>
   <article class="post side-post">
     <div class="thumb-wrap">
-      <a href="post-details.html">
-        <img src="/3.jpg" alt="post" />
-      </a>
+      <nuxt-link :to="`/blog/${baiVietMoi.Slug}`">
+        <img :src="api_url + baiVietMoi.image.url" :alt="baiVietMoi.Slug" />
+      </nuxt-link>
+      <!-- <a href="post-details.html">
+      </a> -->
     </div>
     <!--./ thumb-wrap -->
     <div class="content-entry-wrap">
       <h3 class="entry-title">
-        <a href="post-details.html"
-          >Ứng dụng ảnh vệ tinh xây dựng Cơ sở dữ liệu và thành lập bản đồ
-        </a>
+        <nuxt-link :to="`/blog/${baiVietMoi.Slug}`">
+          {{ baiVietMoi.title.toUpperCase() }}
+        </nuxt-link>
       </h3>
       <!--./ entry-title -->
       <div class="entry-meta-content">
         <div class="entry-date">
-          <span>July 24, 2019 </span>
+          <span>{{ GetFormattedDate(baiVietMoi.created_at) }} </span>
         </div>
         <!--./ entry-date -->
       </div>
@@ -26,7 +28,33 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    baiVietMoi: {
+      type: Object,
+      default: null
+    }
+  },
+  data() {
+    return {
+      api_url: process.env.strapiBaseUri
+    }
+  },
+  computed: {
+    duongDan() {
+      return '/blog/' + this.baiVietMoi.Slug
+    }
+  },
+  methods: {
+    GetFormattedDate(todayTime) {
+      const thoigian = new Date(todayTime)
+      const month = thoigian.getMonth() + 1
+      const day = thoigian.getDate()
+      const year = thoigian.getFullYear()
+      return day + '/' + month + '/' + year
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -1,20 +1,65 @@
 <template>
-  <div class="container">
-    <div>
-      <br />
-      <h2 style="text-align: center">
-        CƠ CẤU TỔ CHỨC
-      </h2>
-      <hr />
-      <img src="/images/struct/struct.jpg" alt="Cơ cấu tổ chức" />
-      <!-- <img src="./SAMCOM_files/31EC8669770B650ACCC8578B80037C91.jpg" class="" /> -->
+  <section class="blog_area section-padding">
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <component-left-sidebar :bai-viet="articles"></component-left-sidebar>
+        </div>
+        <div class="col-lg-3">
+          <component-right-sidebar />
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
+import gql from 'graphql-tag'
+import componentRightSidebar from '~/components/blog/BlogRightSidebar.vue'
+import componentLeftSidebar from '~/components/blog/BlogLeftSidebar.vue'
+// import articlesQuery from '~/apollo/queries/article/articles'
 export default {
   layout: 'infomation',
+  components: {
+    componentRightSidebar,
+    componentLeftSidebar
+  },
+  async asyncData(context) {
+    const data = await context.app.apolloProvider.defaultClient.query({
+      query: gql`
+        query ArcticleCompany {
+          articles(
+            where: {
+              Display: true
+              mota_ne: ""
+              id_in: [36, 35, 34, 33, 32, 31, 30]
+            }
+          ) {
+            title
+            Slug
+            mota
+            image {
+              url
+            }
+            authors {
+              id
+              name
+              image {
+                url
+              }
+            }
+            created_at
+            category {
+              name
+              Slug
+            }
+          }
+        }
+      `
+    })
+    return data.data
+  },
   head() {
     return {
       title:
@@ -40,14 +85,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.container {
-  padding: 15px;
-  padding-left: 50px;
-  padding-right: 40px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-img {
-  justify-content: center;
-}
-</style>
+<style scoped></style>

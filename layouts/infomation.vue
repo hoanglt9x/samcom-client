@@ -3,7 +3,7 @@
     <component-navbar />
     <component-info-overlay />
     <!-- <component-header /> -->
-    <nuxt />
+    <nuxt keep-alive />
     <component-contact />
     <component-footer />
     <component-backtop />

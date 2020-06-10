@@ -1,5 +1,9 @@
 <template>
-  <div class="col-md-6 col-lg-3 col-sm-12">
+  <nuxt-link
+    :to="`/blog/${link}`"
+    tag="div"
+    class="col-md-6 col-lg-3 col-sm-12"
+  >
     <b-card
       :img-src="anhNen"
       img-alt="Anh nen"
@@ -12,7 +16,7 @@
         {{ moTa }}
       </b-card-text>
     </b-card>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -45,6 +49,12 @@ img {
 article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 15px;
+}
+.card {
+  cursor: pointer;
+}
+.card:hover {
+  color: #dc3545;
 }
 .card-text {
   overflow: hidden;

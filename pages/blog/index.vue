@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <component-left-sidebar></component-left-sidebar>
+          <component-left-sidebar :bai-viet="articles"></component-left-sidebar>
         </div>
         <div class="col-lg-3">
           <component-right-sidebar />
@@ -15,14 +15,21 @@
 </template>
 
 <script>
+// import gql from 'graphql-tag'
 import componentRightSidebar from '~/components/blog/BlogRightSidebar.vue'
 import componentLeftSidebar from '~/components/blog/BlogLeftSidebar.vue'
-import articlesQuery from '~/apollo/queries/article/articles'
+import articlesQuery from '~/apollo/queries/arcticle/articles.gql'
 export default {
   layout: 'infomation',
   components: {
     componentRightSidebar,
     componentLeftSidebar
+  },
+  async asyncData(context) {
+    const data = await context.app.apolloProvider.defaultClient.query({
+      query: articlesQuery
+    })
+    return data.data
   },
   head() {
     return {

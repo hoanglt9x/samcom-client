@@ -8,17 +8,20 @@
       <div class="row">
         <div class="col-12">
           <div class="row">
-            <component-blog-card />
-            <component-blog-card />
-            <component-blog-card />
+            <component-blog-card
+              v-for="item in article3"
+              :key="item.id"
+              :bai-viet="item"
+            >
+            </component-blog-card>
           </div>
           <div class="row">
-            <component-blog-card-small />
-            <component-blog-card-small />
-            <component-blog-card-small />
-            <component-blog-card-small />
-            <component-blog-card-small />
-            <component-blog-card-small />
+            <component-blog-card-small
+              v-for="item in article6"
+              :key="item.id"
+              :bai-viet="item"
+            >
+            </component-blog-card-small>
           </div>
         </div>
       </div>
@@ -33,6 +36,16 @@ export default {
   components: {
     componentBlogCard,
     componentBlogCardSmall
+  },
+  props: {
+    article3: {
+      type: Array,
+      default: null
+    },
+    article6: {
+      type: Array,
+      default: null
+    }
   }
 }
 </script>

@@ -1,0 +1,29 @@
+query Arcticles {
+  articles(
+    sort: "created_at:DESC"
+    where: {
+      Display: true
+      mota_ne: ""
+      category: { name_nin: ["Dự án", "Giới thiệu"] }
+    }
+  ) {
+    title
+    Slug
+    mota
+    image {
+      url
+    }
+    authors {
+      id
+      name
+      image {
+        url
+      }
+    }
+    created_at
+    category {
+      name
+      Slug
+    }
+  }
+}

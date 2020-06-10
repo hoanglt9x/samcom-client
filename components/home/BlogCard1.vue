@@ -3,18 +3,17 @@
     <article class="post hentry post-grid">
       <div class="entry-thumb">
         <figure class="thumb-wrap">
-          <a href="/">
-            <img src="/1.jpg" alt="Anh" />
-          </a>
+          <nuxt-link :to="`/blog/${baiViet.Slug}`">
+            <img :src="api_url + baiViet.image.url" :alt="baiViet.Slug" />
+          </nuxt-link>
         </figure>
       </div>
       <div class="content-entry-wrap">
         <div class="entry-content">
           <h3 class="entry-title">
-            <a href="/"
-              >Đột phá trong đo vẽ địa hình - những bước tiến mới của Công ty
-              TNHH MTV Trắc Địa Bản Đồ</a
-            >
+            <nuxt-link :to="`/blog/${baiViet.Slug}`">
+              {{ baiViet.title }}
+            </nuxt-link>
           </h3>
         </div>
         <div class="entry-meta-content">
@@ -22,19 +21,23 @@
             <div class="entry-author-thumb">
               <img
                 class="avatar photo"
-                src="/images/Team/Dinh.jpg"
-                alt="Nguyen An Dinh"
+                :src="api_url + baiViet.authors[0].image.url"
+                :alt="baiViet.authors[0].name"
               />
             </div>
             <div class="entry-author-name">
-              <a href="/">Nguyễn An Định</a>
+              <nuxt-link :to="`/authors/${baiViet.authors[0].id}`">
+                {{ baiViet.authors[0].name }}
+              </nuxt-link>
             </div>
           </div>
           <div class="entry-date">
-            <span>26/05/2020</span>
+            <span>{{ GetFormattedDate(baiViet.created_at) }}</span>
           </div>
           <div class="entry-category">
-            <a class="cat" href="#">Viễn thám</a>
+            <nuxt-link class="cat" :to="`/categories/${baiViet.category.Slug}`">
+              {{ baiViet.category.name }}
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -43,7 +46,28 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    baiViet: {
+      type: Object,
+      default: null
+    }
+  },
+  data() {
+    return {
+      api_url: process.env.strapiBaseUri
+    }
+  },
+  methods: {
+    GetFormattedDate(todayTime) {
+      const thoigian = new Date(todayTime)
+      const month = thoigian.getMonth() + 1
+      const day = thoigian.getDate()
+      const year = thoigian.getFullYear()
+      return day + '/' + month + '/' + year
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -58,4 +82,13 @@ img {
   -webkit-box-orient: vertical;
   display: -webkit-box;
 }
+.cat {
+  font-weight: bold;
+  /* color: #fa563a; */
+}
+/* .post {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: 5px;
+} */
 </style>

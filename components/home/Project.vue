@@ -7,47 +7,14 @@
       </header>
       <div class="row">
         <component-card-project
-          anh-nen="images/project1.jpg"
-          :tieu-de="$t('service.AerialPhotography')"
-          mo-ta="DỰ ÁN THÀNH LẬP BẢN ĐỒ ĐỊA HÌNH TỶ LỆ 1/10.000 BẰNG ẢNH HÀNG KHÔNG CÔNG TRÌNH THỦY ĐIỆN YABASSI – CỘNG HÒA CAMEROON"
-          link="aerial-photography"
-        />
-        <component-card-project
-          anh-nen="images/Project2.jpg"
-          :tieu-de="$t('service.FieldSurveying')"
-          mo-ta="CÔNG TY TRẮC ĐỊA BẢN ĐỒ BÁO CÁO KẾT QUẢ THỬ NGHIỆM XÂY DỰNG CSDL GIS 3D TẠI THỪA THIÊN – HUẾ"
-        />
-        <component-card-project
-          anh-nen="images/Project3.jpg"
-          :tieu-de="$t('service.Database')"
-          mo-ta="TÍCH CỰC TRIỂN KHAI DỰ ÁN “XÂY DỰNG CƠ SỞ DỮ LIỆU NỀN THÔNG TIN CƠ BẢN PHỤC VỤ QUY HOẠCH, PHÁT TRIỂN KINH TẾ - XÃ HỘI VÀ GIÁM SÁT TÀI NGUYÊN THIÊN NHIÊN VÀ MÔI TRƯỜNG CHDCND LÀO”"
-        />
-        <component-card-project
-          anh-nen="images/Project4.jpg"
-          :tieu-de="$t('service.Mapping')"
-          mo-ta="CÔNG TY TNHH MTV TRẮC ĐỊA BẢN ĐỒ TRIỂN KHAI THI CÔNG DỰ ÁN TỔNG THỂ HỒ SƠ ĐỊA CHÍNH VÀ XÂY DỰNG CSDL ĐỊA CHÍNH TRÊN ĐỊA BÀN THÀNH PHỐ HÀ NỘI"
-        />
-        <component-card-project
-          anh-nen="images/project1.jpg"
-          :tieu-de="$t('service.AerialPhotography')"
-          mo-ta="DỰ ÁN THÀNH LẬP BẢN ĐỒ ĐỊA HÌNH TỶ LỆ 1/10.000 BẰNG ẢNH HÀNG KHÔNG CÔNG TRÌNH THỦY ĐIỆN YABASSI – CỘNG HÒA CAMEROON"
-          link="aerial-photography"
-        />
-        <component-card-project
-          anh-nen="images/Project2.jpg"
-          :tieu-de="$t('service.FieldSurveying')"
-          mo-ta="CÔNG TY TRẮC ĐỊA BẢN ĐỒ BÁO CÁO KẾT QUẢ THỬ NGHIỆM XÂY DỰNG CSDL GIS 3D TẠI THỪA THIÊN – HUẾ"
-        />
-        <component-card-project
-          anh-nen="images/Project3.jpg"
-          :tieu-de="$t('service.Database')"
-          mo-ta="TÍCH CỰC TRIỂN KHAI DỰ ÁN “XÂY DỰNG CƠ SỞ DỮ LIỆU NỀN THÔNG TIN CƠ BẢN PHỤC VỤ QUY HOẠCH, PHÁT TRIỂN KINH TẾ - XÃ HỘI VÀ GIÁM SÁT TÀI NGUYÊN THIÊN NHIÊN VÀ MÔI TRƯỜNG CHDCND LÀO”"
-        />
-        <component-card-project
-          anh-nen="images/Project4.jpg"
-          :tieu-de="$t('service.Mapping')"
-          mo-ta="CÔNG TY TNHH MTV TRẮC ĐỊA BẢN ĐỒ TRIỂN KHAI THI CÔNG DỰ ÁN TỔNG THỂ HỒ SƠ ĐỊA CHÍNH VÀ XÂY DỰNG CSDL ĐỊA CHÍNH TRÊN ĐỊA BÀN THÀNH PHỐ HÀ NỘI"
-        />
+          v-for="item in articles"
+          :key="item.id"
+          :anh-nen="api_url + item.image.url"
+          :tieu-de="item.title"
+          :mo-ta="item.title"
+          :link="item.Slug"
+        >
+        </component-card-project>
       </div>
     </div>
   </section>
@@ -55,9 +22,22 @@
 
 <script>
 import componentCardProject from '~/components/home/CardProject.vue'
+import arcticleProjectQuery from '~/apollo/queries/arcticle/ArticleProject.gql'
 export default {
   components: {
     componentCardProject
+  },
+  data() {
+    return {
+      articles: [],
+      api_url: process.env.strapiBaseUri
+    }
+  },
+  apollo: {
+    articles: {
+      prefetch: true,
+      query: arcticleProjectQuery
+    }
   }
 }
 </script>

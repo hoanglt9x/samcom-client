@@ -28,66 +28,52 @@
               right
               :class="{ active: navItem === 1 }"
             >
-              <b-dropdown-item
-                v-scroll-to="'#about'"
-                to="/"
-                @click="activeNav(1)"
+              <b-dropdown-item v-scroll-to="'#about'" @click="activeNav(1)"
                 >{{ $t('links.about.general') }}
               </b-dropdown-item>
-              <b-dropdown-item @click="routerTab('letter', 1)">{{
+              <b-dropdown-item @click="routerTab('/letter', 1)">{{
                 $t('links.about.open-letter')
               }}</b-dropdown-item>
-              <b-dropdown-item @click="activeNav(1)">{{
+              <b-dropdown-item @click="routerTab('/company-struct', 1)">{{
                 $t('links.about.thanhvien')
               }}</b-dropdown-item>
-              <b-dropdown-item @click="routerTab('history', 1)">{{
+              <b-dropdown-item @click="routerTab('/history', 1)">{{
                 $t('links.about.history')
               }}</b-dropdown-item>
-              <b-dropdown-item @click="routerTab('company-struct', 1)">{{
+              <b-dropdown-item @click="routerTab('/blog/co-cau-to-chuc', 1)">{{
                 $t('links.about.companyStruct')
               }}</b-dropdown-item>
-              <b-dropdown-item to="/" @click="activeNav(1)">{{
-                $t('links.about.achievement')
-              }}</b-dropdown-item>
-              <b-dropdown-item to="/" @click="activeNav(1)">{{
-                $t('links.about.equipment')
-              }}</b-dropdown-item>
+              <b-dropdown-item
+                @click="routerTab('/blog/thanh-tich-dat-duoc', 1)"
+                >{{ $t('links.about.achievement') }}</b-dropdown-item
+              >
+              <b-dropdown-item
+                @click="
+                  routerTab('/blog/he-thong-trang-thiet-bi-cua-samcom', 1)
+                "
+                >{{ $t('links.about.equipment') }}</b-dropdown-item
+              >
             </b-nav-item-dropdown>
 
             <!-- Service -->
             <b-nav-item
               v-scroll-to="'#services'"
-              to="/"
               :class="{ active: navItem === 2 }"
               @click="activeNav(2)"
               >{{ $t('links.service').toUpperCase() }}</b-nav-item
             >
 
             <!-- Blog -->
-            <b-nav-item-dropdown
-              :text="$t('links.News.name').toUpperCase()"
-              right
+            <b-nav-item
+              to="/blog"
               :class="{ active: navItem === 3 }"
+              @click="activeNav(3)"
+              >{{ $t('links.News.name').toUpperCase() }}</b-nav-item
             >
-              <!-- <b-dropdown-item>{{ $t('links.News.RandD') }} </b-dropdown-item> -->
-              <b-dropdown-item @click="routerTab('blog', 3)">{{
-                $t('links.News.internalNews')
-              }}</b-dropdown-item>
-              <!-- <b-dropdown-item to="/">{{
-                $t('links.News.specializedNews')
-              }}</b-dropdown-item> -->
-              <b-dropdown-item to="/" @click="activeNav(3)">{{
-                $t('links.News.countryNews')
-              }}</b-dropdown-item>
-              <b-dropdown-item to="/" @click="activeNav(3)">{{
-                $t('links.News.foreignNews')
-              }}</b-dropdown-item>
-            </b-nav-item-dropdown>
 
             <!-- Project -->
             <b-nav-item
               v-scroll-to="'#projects'"
-              to="/"
               :class="{ active: navItem === 4 }"
               @click="activeNav(4)"
               >{{ $t('links.Project').toUpperCase() }}</b-nav-item
@@ -96,7 +82,6 @@
             <!-- Team -->
             <b-nav-item
               v-scroll-to="'#team'"
-              to="/"
               :class="{ active: navItem === 5 }"
               @click="activeNav(5)"
               >{{ $t('links.Team').toUpperCase() }}</b-nav-item
@@ -105,7 +90,6 @@
             <!-- Gallery -->
             <b-nav-item
               v-scroll-to="'#portfolio'"
-              to="/"
               :class="{ active: navItem === 6 }"
               @click="activeNav(6)"
               >{{ $t('links.Gallery').toUpperCase() }}</b-nav-item

@@ -1,0 +1,13 @@
+query ArticleProject {
+  articles(
+    sort: "created_at:DESC"
+    where: { Display: true, category: { name: "Dự án" } }
+  ) {
+    title
+    Slug
+    image {
+      url
+    }
+    created_at
+  }
+}

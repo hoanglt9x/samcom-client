@@ -3,7 +3,7 @@
     <component-Intro />
     <component-service />
     <component-project />
-    <component-blog-home />
+    <component-blog-home :article3="article3" :article6="article6" />
     <component-team />
     <component-liblary />
     <component-client />
@@ -20,6 +20,7 @@ import componentClient from '~/components/home/Clients.vue'
 import componentLiblary from '~/components/home/Liblary.vue'
 import componentProject from '~/components/home/Project.vue'
 import componentBlogHome from '~/components/home/BlogHome.vue'
+import arcticleRecentQuery from '~/apollo/queries/arcticle/ArcticleRecent.gql'
 export default {
   components: {
     componentContact,
@@ -30,6 +31,20 @@ export default {
     componentLiblary,
     componentProject,
     componentBlogHome
+  },
+  async asyncData(context) {
+    const data = await context.app.apolloProvider.defaultClient.query({
+      query: arcticleRecentQuery
+    })
+    return data.data
+  },
+  computed: {
+    article3() {
+      return this.articles.slice(0, 3)
+    },
+    article6() {
+      return this.articles.slice(3, 9)
+    }
   },
   head() {
     return {
@@ -49,6 +64,11 @@ export default {
       ]
     }
   }
+  // apollo: {
+  //   articles: {
+  //     query: arcticleRecentQuery
+  //   }
+  // }
 }
 </script>
 <style scoped></style>

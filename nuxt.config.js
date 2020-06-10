@@ -1,10 +1,12 @@
+// import path from 'path'
+// import fs from 'fs'
 export default {
   mode: 'universal',
   /*
    ** Headers of the page
    */
   env: {
-    strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
+    strapiBaseUri: process.env.API_URL || 'http://192.168.1.28:1337'
   },
   head: {
     title: process.env.npm_package_name || '',
@@ -66,9 +68,9 @@ export default {
     '@/plugins/i18n.js',
     {
       src: '~/plugins/vue-scrollmagic.js',
-      ssr: false
+      mode: 'client'
     },
-    { src: '~/plugins/owl.js', ssr: false },
+    { src: '~/plugins/owl.js', mode: 'client' },
     { src: '@/plugins/vue-swiper.js', mode: 'client' }
   ],
   /*
@@ -94,6 +96,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
     'vue-scrollto/nuxt',
+    '@nuxtjs/markdownit',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     [
@@ -104,10 +107,25 @@ export default {
       }
     ]
   ],
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
+  },
   apollo: {
+    defaultOptions: {
+      // See 'apollo' definition
+      // For example: default query options
+      $query: {
+        loadingKey: 'loading',
+        fetchPolicy: 'cache-and-network'
+      }
+    },
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+        httpEndpoint:
+          process.env.BACKEND_URL || 'http://192.168.1.28:1337/graphql'
       }
     }
   },
@@ -120,8 +138,8 @@ export default {
    */
   axios: {},
   server: {
-    port: 8080, // default: 3000
-    host: '0.0.0.0' // default: localhost
+    port: 80, // default: 3000
+    host: '0.0.0.0'
   },
   /*
    ** Build configuration
@@ -130,6 +148,19 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            {
+              buildTarget: isServer ? 'server' : 'client',
+              corejs: { version: 3 }
+            }
+          ]
+        ]
+      }
+    }
   }
 }

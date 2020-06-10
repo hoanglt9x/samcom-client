@@ -1,0 +1,25 @@
+query articleCategories($chude: String!) {
+  categories(where: { Slug: $chude }) {
+    name
+    articles(sort: "created_at:DESC", where: { Display: true, mota_ne: "" }) {
+      title
+      Slug
+      mota
+      image {
+        url
+      }
+      authors {
+        id
+        name
+        image {
+          url
+        }
+      }
+      created_at
+      category {
+        name
+        Slug
+      }
+    }
+  }
+}

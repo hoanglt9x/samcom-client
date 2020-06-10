@@ -4,7 +4,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <component-left-sidebar :bai-viet="articles[0]" />
+          <component-left-sidebar
+            :bai-viet="categories[0].articles"
+          ></component-left-sidebar>
         </div>
         <div class="col-lg-3">
           <component-right-sidebar />
@@ -17,8 +19,8 @@
 <script>
 // import gql from 'graphql-tag'
 import componentRightSidebar from '~/components/blog/BlogRightSidebar.vue'
-import componentLeftSidebar from '~/components/blog/BlogLeftDetail.vue'
-import articleQuery from '~/apollo/queries/arcticle/arcticle.gql'
+import componentLeftSidebar from '~/components/blog/BlogLeftSidebar.vue'
+import articleCategoriesQuery from '~/apollo/queries/arcticle/ArticleCategories.gql'
 export default {
   layout: 'infomation',
   components: {
@@ -27,25 +29,24 @@ export default {
   },
   async asyncData(context) {
     const data = await context.app.apolloProvider.defaultClient.query({
-      query: articleQuery,
-      variables: { tenbai: context.route.params.slug }
+      query: articleCategoriesQuery,
+      variables: { chude: context.route.params.slug }
     })
     return data.data
   },
   head() {
     return {
-      title: this.$t('links.News.name') + '-' + this.articles[0].title,
+      title: this.$t('links.News.name') + '-' + this.categories[0].name,
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'keyword',
           name: 'keyword',
-          content: this.$t('links.News.name') + '-' + this.articles[0].title
+          content: this.$t('links.News.name') + '-' + this.categories[0].name
         },
         {
           hid: 'title',
           name: 'title',
-          content: this.$t('links.News.name') + ' - ' + this.articles[0].title
+          content: this.$t('links.News.name') + ' - ' + this.categories[0].name
         }
       ]
     }

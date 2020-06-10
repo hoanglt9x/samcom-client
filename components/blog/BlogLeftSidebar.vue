@@ -10,12 +10,12 @@
         </div>
       </div> -->
       <div class="col-12">
-        <component-arcticle-item />
-        <component-arcticle-item />
-        <component-arcticle-item />
-        <component-arcticle-item />
-        <component-arcticle-item />
-        <component-arcticle-item />
+        <component-arcticle-item
+          v-for="item in baiViet"
+          :key="item.Slug"
+          :bai-viet="item"
+        >
+        </component-arcticle-item>
       </div>
     </div>
   </main>
@@ -26,6 +26,12 @@ import componentArcticleItem from '~/components/blog/ArcticleItem.vue'
 export default {
   components: {
     componentArcticleItem
+  },
+  props: {
+    baiViet: {
+      type: Array,
+      default: null
+    }
   }
 }
 </script>

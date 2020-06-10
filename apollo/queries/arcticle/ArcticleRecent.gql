@@ -1,0 +1,25 @@
+query ArcticleRecent {
+  articles(
+    sort: "created_at:DESC"
+    limit: 9
+    where: { Display: true, category: { name_nin: ["Dự án", "Giới thiệu"] } }
+  ) {
+    title
+    Slug
+    image {
+      url
+    }
+    authors {
+      id
+      name
+      image {
+        url
+      }
+    }
+    created_at
+    category {
+      name
+      Slug
+    }
+  }
+}
